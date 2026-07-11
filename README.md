@@ -22,20 +22,27 @@ prompts/
 
 ## Verifying the paper's figures
 
-Every headline figure in the paper is the sum of a column in
-`development-log.csv`:
+All monetary values are in USD. Most headline figures are the sum of a column
+in `development-log.csv`:
 
-| Paper figure | Column | Value |
+| Paper figure | Source | Value |
 | --- | --- | --- |
-| Total AI spend | `ai_cost_usd` | US$ 33.66 |
 | Input tokens | `input_tokens` | 952,000 |
 | Output tokens | `output_tokens` | 837,000 |
 | Actual human effort | `human_hours_ai` + `human_hours_review` | 35.2 h |
 | Counterfactual hours | `counterfactual_hours` | 329 h |
-| Counterfactual cost | `counterfactual_cost_brl` | U$ 5,678 |
+| Counterfactual cost | `counterfactual_cost_usd` | US$ 3,005.55 |
+| Real AI spend | invoices/subscription (see `salary-references.md` §5) | ~US$ 69 |
 
-Each non-empty `counterfactual_cost_brl` equals
-`counterfactual_hours × hourly_rate_brl` exactly.
+Each non-empty `counterfactual_cost_usd` equals
+`counterfactual_hours × hourly_rate_usd` exactly.
+
+**Important:** the `ai_cost_usd` column is a per-activity *token-based estimate*
+and sums to US$ 33.66. This is **not** the figure the paper uses for the cost
+ratio. Because the coding agent runs under a flat-rate subscription, real AI
+cost comes from invoices (~US$ 69), not token counts. The paper treats the
+token estimate as a corrected measurement error; `salary-references.md` §5
+explains the two bases. Use ~US$ 69 for the 9.9x ratio.
 
 ## Known limitations of these records
 
@@ -61,4 +68,6 @@ where a layer has no matching activity, cells are left empty rather than
 imputed. No value was invented. Column totals are unaffected: every source
 value appears exactly once.
 
+## License
 
+[TODO: choose a license, e.g. CC BY 4.0 for data.]
