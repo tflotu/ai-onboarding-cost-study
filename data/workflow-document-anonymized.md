@@ -640,13 +640,13 @@ The AI did not replace the engineer — it removed the implementation friction. 
 #### AI spending screenshots
 
 ### OpenAI
-<img width="2288" height="931" alt="image" src="619719897-4ae4e17a-1053-49e9-8c5e-08a2751e7ab2.png" />
+<img width="2288" height="931" alt="image" src="openai-billing.png" />
 
 ### Abacus AI
-<img width="2239" height="838" alt="image" src="619720052-479a16d1-2af9-4e54-a9cb-9d208657e06e.png" />
-<img width="2243" height="869" alt="image" src="619720129-634016a1-7ba4-490f-a571-df1d4117f05e.png" />
-<img width="2243" height="817" alt="image" src="619720210-d15129cf-e362-454d-a4ce-6b1020f5584b.png" />
-<img width="2245" height="859" alt="image" src="619720319-51d197d8-bdab-444b-bdab-6d57282e011c.png" />
+<img width="2239" height="838" alt="image" src="abacus-billing-1.png" />
+<img width="2243" height="869" alt="image" src="abacus-billing-2.png" />
+<img width="2243" height="817" alt="image" src="abacus-billing-3.png" />
+<img width="2245" height="859" alt="image" src="abacus-billing-4.png" />
 
 #### Real cost per phase — Tools + human effort
 
