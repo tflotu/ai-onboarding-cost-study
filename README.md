@@ -11,14 +11,34 @@ information.
 
 ```
 data/
+  workflow-document-anonymized.md   Full development log: per-phase narrative of
+                                    AI use, the three-layer economic data, and
+                                    the billing screenshots. This is the primary
+                                    source from which the CSV and the salary
+                                    references were derived.
   development-log.csv     One row per recorded activity: tokens, AI cost,
                           real human effort, and the counterfactual estimate.
   salary-references.md    Hourly rates, sources, exchange rate, and the
                           profile-assignment rule used for the counterfactual.
+  openai-billing.png      OpenAI dashboard: metered embedding/completion cost.
+  abacus-billing-1.png    Abacus AI credit-consumption screenshots backing
+  abacus-billing-2.png    the metered AI cost.
+  abacus-billing-3.png
+  abacus-billing-4.png
 prompts/
   prompt-catalogue.md     The ten versioned application prompts (PROMPT-001
                           to PROMPT-010) embedded in the system.
 ```
+
+## How the artifacts relate
+
+`data/workflow-document-anonymized.md` is the primary record. `development-log.csv`
+is the per-activity table from it in machine-readable form, and
+`salary-references.md` documents the rates and conversions applied. The billing
+screenshots (`*-billing-*.png`) are the provider records that back the metered AI
+costs, cross-referenced from the consolidated cost tables in the workflow
+document, so the AI-spend figures can be traced from the paper down to the
+invoice.
 
 ## Verifying the paper's figures
 
@@ -43,6 +63,11 @@ ratio. Because the coding agent runs under a flat-rate subscription, real AI
 cost comes from invoices (~US$ 69), not token counts. The paper treats the
 token estimate as a corrected measurement error; `salary-references.md` §5
 explains the two bases. Use ~US$ 69 for the 9.9x ratio.
+
+The metered portion of that real cost can be checked directly against the
+provider billing screenshots in `data/` (`openai-billing.png`,
+`abacus-billing-*.png`), which are cross-referenced from the consolidated cost
+tables in `data/workflow-document-anonymized.md`.
 
 ## Known limitations of these records
 
