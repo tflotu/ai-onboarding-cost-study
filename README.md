@@ -95,4 +95,4 @@ value appears exactly once.
 
 ## License
 
-[TODO: choose a license, e.g. CC BY 4.0 for data.]
+[MIT License](LICENSE)
